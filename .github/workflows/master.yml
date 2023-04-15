@@ -16,7 +16,7 @@ jobs:
       - name: Check files content s
         uses: cypress-io/github-action@v5
         with:
-          command: cd cypress
+          command: cd ./cypress
           
       - name: Check files content ss
         uses: cypress-io/github-action@v5
