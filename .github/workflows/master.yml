@@ -18,6 +18,13 @@ jobs:
         with:
           command: ls -a
           
+      - name: upload artifact
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-execution-report
+          path: cypress/reports/html
+          
 
           
           
