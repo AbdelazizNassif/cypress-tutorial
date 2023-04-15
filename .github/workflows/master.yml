@@ -11,7 +11,7 @@ jobs:
       - name: Run the testcases
         uses: cypress-io/github-action@v5
         with:
-          command: npx cypress run --record --key dbea81c2-9e90-440e-9ee1-25c40030a1c5 --parallel
+          command: npx cypress run --record --group 2x-chrome --key dbea81c2-9e90-440e-9ee1-25c40030a1c5 --parallel
 
       - name: upload test results report as artifact in the ci pipeline
         uses: actions/upload-artifact@v3
