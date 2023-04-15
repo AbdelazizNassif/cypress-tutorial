@@ -2,30 +2,21 @@ name: Cypress tests
 on: push
 jobs:
   cypress-run:
-    name: Cypress run
+    name: Run tests then artifact the test results
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout - Clone the repository master branch
         uses: actions/checkout@v3
 
-      - name: Cypress run 
+      - name: Run the testcases
         uses: cypress-io/github-action@v5
         with:
           command: npx cypress run
 
-      - name: Check files content ss
-        uses: cypress-io/github-action@v5
-        with:
-          command: ls -a
           
-      - name: upload artifact
+      - name: upload test results report as artifact in the ci pipeline
         uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-execution-report
-          path: ./cypress
-          
-
-          
-          
-          
+          path: ./cypress/reports/html
