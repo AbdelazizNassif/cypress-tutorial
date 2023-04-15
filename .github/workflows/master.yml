@@ -16,7 +16,8 @@ jobs:
       - name: Check files content s
         uses: cypress-io/github-action@v5
         with:
-          command: ls -a
+          command: cd cypress
+                   ls -a
           
       - name: upload artifact
         uses: actions/upload-artifact@v3
