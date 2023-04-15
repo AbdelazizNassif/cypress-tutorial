@@ -11,15 +11,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          spec: cypress/e2e/
-          command: npm run cypress
-          
-      - name: upload artifact
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: cypress-execution-report
-          path: cypress/reports/html
+          command: npm run html-report
+
           
           
           
