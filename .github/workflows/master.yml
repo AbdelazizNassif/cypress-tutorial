@@ -12,6 +12,15 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           command: npx cypress run
+          
+      - name: Check files content run
+        with:
+          command: cd cypress
+          
+      - name: Check files content s
+        with:
+          command: ls -a
+          
 
           
           
