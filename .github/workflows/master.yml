@@ -28,7 +28,7 @@ jobs:
         if: always()
         with:
           name: cypress-execution-report
-          path: cypress/reports/html
+          path: cypress/reports/html/index.html
           
 
           
