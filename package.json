@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "REST, API_TEST"
+    "runner": "cypress open",
+    "html-report": "cypress run --e2e"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,7 @@
     "cypress": "^12.9.0"
   },
   "dependencies": {
-    "cypress-plugin-api": "^2.11.0",
-    "faker": "^6.6.6"
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "cypress-plugin-api": "^2.11.0"
   }
 }
