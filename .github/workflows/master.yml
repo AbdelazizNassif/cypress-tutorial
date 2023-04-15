@@ -11,7 +11,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          command: npm run html-report
+          command: npm cypress run --e2e
 
           
           
