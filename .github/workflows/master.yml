@@ -8,13 +8,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: install dep
-        uses: cypress-io/github-action@v5
-        with:
-          build: npm run build
-          start: npm start
-          command: npx cypress run
-
       - name: Cypress run 
         uses: cypress-io/github-action@v5
         with:
@@ -30,7 +23,7 @@ jobs:
         if: always()
         with:
           name: cypress-execution-report
-          path: ./cypress/reports/html/index.html
+          path: ./cypress
           
 
           
